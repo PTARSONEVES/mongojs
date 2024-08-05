@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose =  require('mongoose');
-mongoose.connect(process.env.CONNECTION)
+mongoose.connect(process.env.CONNECTIONAGENDA)
     .then(() => {
         console.log('Conectado à base de dados!');
         app.emit('pronto');
@@ -28,7 +28,7 @@ const sessionOptions = session({
     secret: 'vlaoihfgmnvjhsdytgvclooiugnmnskk a6()',
     store: MongoStore.create({ 
         mongooseConnection: mongoose.connection,
-        mongoUrl: process.env.CONNECTION}),
+        mongoUrl: process.env.CONNECTIONAGENDA}),
     resave: false,
     saveUninitialized: false,
     cookie: {

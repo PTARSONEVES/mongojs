@@ -1,12 +1,21 @@
-<%- include('includes/header') %>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+    <link rel="stylesheet"  href="./assets/css/style.css">
+</head>
+<body>
    <h2>Pagina inicial <spam><a href="#">teste</a></spam></h2>
    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id illum a ullam ipsam consequatur quisquam, saepe illo hic unde voluptate autem nobis officia tenetur odit dolore cum officiis veritatis porro.</p>
    <section class="container">
     <form action="/" method="post">
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-        <label>Clientes</label>
+        <label>Cliente</label>
         <input type="text" name="cliente">
-        <button>Submits</button>
+        <button>Submit</button>
     </form>
    </section>
-<%- include('includes/footer') %>
+</body>
+</html>
