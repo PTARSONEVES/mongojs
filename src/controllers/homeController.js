@@ -8,6 +8,7 @@ HomeModel.create({
     .then(dados => console.log(dados))
     .catch(e => console.log(e));
 */
-exports.paginaInicial = (req, res) => {
+exports.index = (req, res) => {
     res.render('index');
 };
+

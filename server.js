@@ -23,7 +23,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-
 const sessionOptions = session({
     secret: 'vlaoihfgmnvjhsdytgvclooiugnmnskk a6()',
     store: MongoStore.create({ 
@@ -50,7 +49,7 @@ app.use(routes);
 
 app.on('pronto', () => {
    app.listen(port, () => {
-        console.log('Home: http://localhost:3000');
-        console.log('Servidor rodando na porta',port);
+        console.log('Home: http://localhost:'+port.toString());
+        console.log('Servidor rodando na porta '+port.toString());
     }); 
 });
